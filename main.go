@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/slyang-git/GoTutorial/greetings"
 	"github.com/slyang-git/GoTutorial/world"
 	"rsc.io/quote"
 )
@@ -12,5 +13,6 @@ import (
 func main() {
 	fmt.Println(quote.Go())
 	fmt.Println(quote.Opt())
-	fmt.Printf(world.Country)
+	fmt.Println(world.Country)
+	fmt.Printf(greetings.Hello("yangshuanglong"))
 }
