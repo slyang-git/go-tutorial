@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/slyang-git/GoTutorial/greetings"
-	"github.com/slyang-git/GoTutorial/world"
+
+	"github.com/slyang-git/go-tutorial/greetings"
+	"github.com/slyang-git/go-tutorial/world"
 	"rsc.io/quote"
 )
 
@@ -19,9 +20,13 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	greeting, err := greetings.Hello("")
+	greeting, err := greetings.Hello("xx")
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println(greeting)
+
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	messages, err := greetings.Hellos(names)
+	fmt.Println(messages)
 }
